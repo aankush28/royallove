@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyalLove</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Love_heart_uidaodjsdsew.gif/1200px-Love_heart_uidaodjsdsew.gif">
+    <style >
+        body{
+         background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("https://townsquare.media/site/137/files/2019/02/GettyImages-637543328.jpg?w=980&q=75");
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         width: 100%;
+         height: 100vh;
+         position: relative;
+        }
+        header{
+         width: 100%;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+        }
+        .result input[type=text] {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+  font-size: 40px;
+  color: coral;
+  font-weight: bolder;
+}
+  
+       </style>
+</head>
+<body>
+ <!--    <form action="" method="POST">
+        <div>
+          <label for="Your_name">Your_name</label>
+          <input type="text" id="Your_name" name="Your_name" />
+        </div>
+        <div>
+          <label for="Love_name">Love_name</label>
+          <input type="text" id="Love_name" name="Love_name" />
+        </div>
+        <button type="submit">Submit</button>
+      </form> -->
+      <form action="" method="POST">
+      <header >
+ 
+        <div class="card w-auto m-auto text-center ">
+          <div class="card-header bg-danger text-white">LOVE CALCULATOR</div>
+          <div class="card-body"  >
+           <form class="form-inline w-75 m-auto" action="" method="POST">
+            <div class="form-group">
+             <input type="text" id="Your_name" name="Your_name"  class="form-control text-center" placeholder="Your Name" >
+            </div>
+            <div class="pl-4 pr-4">
+             <span> + </span>
+            </div>
+            <div class="form-group">
+             <input class="form-control text-center" placeholder=" Love Name" type="text" id="Love_name" name="Love_name">
+            </div>
+<br>
+             <button  class="btn btn-success w-50"  onclick='checkloveper()' type="submit"> Check % </button>
+
+           </form> <br>
+            
+            <br>
+            <div class="result">
+             <input type="text" name="" placeholder="LOVE PERCENTAGE" class="form-control text-center w-45 m-auto" id="lovevalue" disabled >
+            </div>
+          </div> 
+          <div class="card-footer ">God Bless Your RelationShip</div>
+        </div>
+        
+        </header>
+        
+        <script>
+         function checkloveper(){
+        
+          var Your_name = document.getElementById('Your_name').value;
+          var Love_name = document.getElementById('Love_name').value;
+        
+          if(Your_name == ""){
+           alert('Please enter your Your_name refresh the page...');
+          }else if (Your_name.length <=2 ) {
+           alert('Min lenght is 3 refresh the page..')
+          }else if(!isNaN(Your_name)){
+           alert('Numbers are not allowed refresh the page..');
+          }
+        
+          else if(Love_name == ""){
+           alert('Please enter your love name refresh the page..');
+          }else if (Love_name.length <=2 ) {
+           alert('Min lenght is 3 refresh the page..')
+          }else if(!isNaN(Love_name)){
+           alert('Numbers are not allowed refresh the page..');
+          }
+          else{
+          var lovdata = Math.random() * 100;
+          lovdata = Math.floor(lovdata);
+          document.getElementById('lovevalue').value = lovdata + "%"; 
+          }
+          
+         }
+        </script>
+
+    
+
+</body>
+</html>
